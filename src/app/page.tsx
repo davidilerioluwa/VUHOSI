@@ -11,7 +11,7 @@ export default function Home() {
       </section>
       
       {/* mid section */}
-      <div className="flex flex-col w-full items-center justify-center md:p-4">
+      <section className="flex flex-col w-full items-center justify-center md:p-4">
         <img src="logo.png" className="w-16 mb-2"/>
         <p className="text-3xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange to-lightOrange">AI POWERED INSIGHTS</p>
         <p className="text-3xl md:text-6xl font-bold text-white text-center">For Startups And Investors</p>
@@ -26,7 +26,7 @@ export default function Home() {
               Join our waitlist and get early access when we launch
           </label>
         </div>
-      </div>
+      </section>
 
       {/* lower section */}
       <section className="px-6 md:px-20 lg:px-40 xl:px-60 pt-6 pb-4">
