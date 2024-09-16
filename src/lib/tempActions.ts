@@ -1,6 +1,6 @@
 "use server"
 
-export const addUserToWaitlist = async (values: any) => {
+export const addUserToWaitlist = async (values: {email_address:string}) => {
    const response = await fetch(
     "⁠https://api-dev.vuhosi.com/v1/waitlist",
     {

@@ -8,11 +8,8 @@ import { z } from "zod"
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
+
 } from "@/components/ui/form"
 import { toast } from 'sonner'
 import { addUserToWaitlist } from '@/lib/tempActions'
