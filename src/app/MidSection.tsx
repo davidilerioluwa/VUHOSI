@@ -6,7 +6,7 @@ const MidSection = () => {
   return (
 <section className="flex flex-col w-full items-center justify-center md:p-4">
     <img alt='logo' src="logo.png" className="w-16 mb-2"/>
-    <p className="slideRightIn text-3xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange to-lightOrange"> <ReactTyped strings={["AI POWERED INSIGHTS"]} typeSpeed={60}/></p>
+    <p className="slideRightIn text-3xl text-center md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange to-lightOrange"> <ReactTyped strings={["AI POWERED INSIGHTS"]} typeSpeed={60}/></p>
     <p  className="slideLeftIn text-3xl md:text-6xl font-bold text-white text-center" ><ReactTyped strings={["For Startups And Investors"]} typeSpeed={60}/></p>
     <p className="text-grey300 text-center px-4 md:px-40 lg:px-60 xl:px-80 my-3 text-sm">Optimise your startup with critical intelligence to help identify risks and opportunities, guiding you to develop market-fit products, build strong teams, and scale your startup confidently</p>
     <div className="w-full flex flex-col items-center justify-center">
