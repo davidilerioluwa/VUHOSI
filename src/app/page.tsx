@@ -1,7 +1,4 @@
 
-"use client"
-import { ReactTyped } from 'react-typed'
-
 export default function Home() {
   return (
     <div className=" bg-deepBlue w-screen h-full min-h-screen">
