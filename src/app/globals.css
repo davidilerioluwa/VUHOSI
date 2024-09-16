@@ -2,7 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-.slideLeftIn {
+
+.gradient-animation{
+
+  background-image: linear-gradient(270deg ,  #F56630, #fcd2c2,white,#F56630);
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  color: transparent;
+  
+  background-size: 200%;
+  background-position: 200%;  
+  
+  animation: animatedText ease-out 2s infinite;
+}
+
+@keyframes animatedText{
+  to{
+    background-position: 100%; 
+  }
+}
+
+/* .slideLeftIn {
   position: relative;
   left: -100vw;
   width: 100%;
@@ -39,4 +59,4 @@
 
 .slideRightIn {
   animation: 1.5s ease-out 0s 1 slideInFromRight;
-}
+} */
