@@ -1,5 +1,6 @@
 import AddWaitlist from "@/components/AddWaitlist";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -32,7 +33,8 @@ export default function Home() {
         <div className="border border-grey600 flex flex-col gap-3 items-center justify-center rounded-md p-[40px]">
           <p className="text:-xl leading-[23.2px] md:text-3xl text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange to-lightOrange">Schedule A Meeting</p>
           <p className="text-center leading-[23.2px] text-grey300 md:px-10 lg:px-20 xl:px-40">If you are interested in investing in Vuhosi, schedule a meeting with our Investment team or reach out at <span className="text-orange">invest@vuhosi.com</span> for more details. </p>
-          <button className="border border-grey500 bg-deeperBlue rounded-3xl px-6 py-[10px] text-white text-sm mt-2">Schedule A Meeting</button>
+          <Link    href="https://calendly.com/developer-vuhosi/30min"
+              target="_blank" className="border border-grey500 bg-deeperBlue rounded-3xl px-6 py-[10px] text-white text-sm mt-2">Schedule A Meeting</Link>
         </div>
       </section>
     </div>
