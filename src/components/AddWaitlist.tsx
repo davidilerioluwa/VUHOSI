@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef } from 'react'
+import React, { forwardRef } from 'react'
 import { Input } from './ui/input'
 import { Button } from './ui/button'
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -19,7 +19,8 @@ const FormSchema = z.object({
   email_address: z.string().email(),
 })
 
-function AddWaitlist() {
+const AddWaitlist= forwardRef(function AddWaitlist(props,ref:any) {
+
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema)
   })
@@ -56,7 +57,7 @@ function AddWaitlist() {
                 <>
 
                   <FormControl>
-                    <Input {...field} type="text" placeholder="Enter Your Ema&#8204;il Address" name="randomized-name-123456"  className="text-sm focus-visible:ring-0 focus:ring-0 focus:outline-0 text-grey500 border border-grey500 md:border-none p-4 md:p-2 bg-[#1D2739]  outline-none focus:outline-none w-full rounded-3xl" />
+                    <Input {...field} type="text" ref={ref} placeholder="Enter Your Ema&#8204;il  Address" name="randomized-name-123456"  className="text-sm focus-visible:ring-0 focus:ring-0 focus:outline-0 text-grey500 border border-grey500 md:border-none p-4 md:p-2 bg-[#1D2739]  outline-none focus:outline-none w-full rounded-3xl" />
                   </FormControl>
                 </>
 
@@ -71,6 +72,6 @@ function AddWaitlist() {
       </Form>
     </>
   )
-}
+})
 
 export default AddWaitlist

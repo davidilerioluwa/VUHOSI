@@ -1,15 +1,22 @@
+"use client"
 import AddWaitlist from "@/components/AddWaitlist";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useRef } from "react";
 
 export default function Home() {
+  const AddWaitlistRef= useRef<HTMLInputElement>(null);
   return (
     <div className="grid-pattern bg-deepBlue w-screen h-full min-h-screen">
       {/* top section */}
       <section className='w-full px-6 md:px-20 pb-8 md:pb-2 pt-2 md:py-6'>
         <div className='flex md:border border-grey500 py-3 rounded-full md:px-6 items-center justify-between'>
           <span className='p-2 text-xl md:text-3xl text-orange font-bold pr-4'>VUHOSI</span>
-          <Button className='bg-orange hover:bg-orange/90 h-[48px] text-white text-sm font-bold rounded-3xl w-fit  text-nowrap px-4 md:px-12 py-2'>Join Waitlist</Button>
+          <Button className='bg-orange hover:bg-orange/90 h-[48px] text-white text-sm font-bold rounded-3xl w-fit  text-nowrap px-4 md:px-12 py-2' onClick={()=>{
+      if (AddWaitlistRef.current !== null) {
+      AddWaitlistRef.current.focus();
+    }}}
+    >Join Waitlist</Button>
         </div>
       </section>
 
@@ -21,7 +28,7 @@ export default function Home() {
         <p className="text-grey300 text-center px-4 md:px-40 lg:px-60 xl:px-80 my-3 text-sm">Optimise your startup with critical intelligence to help identify risks and opportunities, guiding you to develop market-fit products, build strong teams, and scale your startup confidently</p>
         <div className="w-full flex flex-col items-center justify-center">
           {/* searchbox */}
-          <AddWaitlist />
+          <AddWaitlist ref={AddWaitlistRef}/>
           <label className="text-grey400 mt-2 text-sm w-full text-center hidden md:block">
             Join our waitlist and get early access when we launch
           </label>
