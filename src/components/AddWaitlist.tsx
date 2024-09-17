@@ -19,7 +19,7 @@ const FormSchema = z.object({
   email_address: z.string().email(),
 })
 
-const AddWaitlist= forwardRef(function AddWaitlist(props,ref:any) {
+const AddWaitlist= forwardRef(function AddWaitlist(props,ref:React.ForwardedRef<HTMLInputElement>) {
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema)
