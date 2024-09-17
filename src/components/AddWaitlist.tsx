@@ -58,7 +58,7 @@ const AddWaitlist= forwardRef(function AddWaitlist(props,ref:any) {
 
                   <FormControl>
                     {/* the randomized name and the extra characters to the placeholder were added to disable autocomplete */}
-                    <Input {...field} type="text" ref={ref} placeholder="Enter Your Ema&#8204;il  Address" name="randomized-name-123456"  className="text-sm focus-visible:ring-0 focus:ring-0 focus:outline-0 text-grey500 border border-grey500 md:border-none p-4 md:p-2 bg-[#1D2739]  outline-none focus:outline-none w-full rounded-3xl" />
+                    <Input {...field} type="text" ref={ref} placeholder="Enter Your Ema&#8204;il Address" name="randomized-name-123456"  className="text-sm focus-visible:ring-0 focus:ring-0 focus:ring-offset-[#1D2739] focus:ring-offset-0 focus:outline-0 text-grey500 border border-grey500 md:border-none p-4 md:p-2 bg-[#1D2739]  outline-none focus:outline-none w-full rounded-3xl" />
                   </FormControl>
                 </>
 
